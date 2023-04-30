@@ -1,0 +1,8 @@
+@use './sass/resets';
+@use './sass/variables' as v;
+@use './sass/view/usuarios/listar.scss';
+@use './sass/view/tareas/visualizar.scss';
+
+body{
+    background-color: v.$Body;
+}

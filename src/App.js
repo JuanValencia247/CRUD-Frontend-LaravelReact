@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Menu from './components/layout/Menu';
+import Login from './components/view/login/Login';
+import ListarTarea from './components/view/tareas/ListarTarea';
+import VisualizarTarea from './components/view/tareas/VisualizarTarea';
+import CrearUsuario from './components/view/usuarios/CrearUsuario';
+import EditarUsuario from './components/view/usuarios/EditarUsuario';
+import ListarUsuario from './components/view/usuarios/ListarUsuario';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+      <Menu/>
+        <Routes>
+          <Route path='/' element={<ListarUsuario/>}/>
+          <Route path='/crear' element={<CrearUsuario/>}/>
+          <Route path='/listar' element={<ListarTarea/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/visualizar/:id' element={<VisualizarTarea/>}/>
+          <Route path='/editar/:id' element={<EditarUsuario/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

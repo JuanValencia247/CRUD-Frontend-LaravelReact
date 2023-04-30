@@ -1,0 +1,63 @@
+@use '../../variables' as v;
+@use '../../mixins' as m;
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    
+}
+.table{
+    border: 1px solid;
+    padding: 20px;
+    box-shadow: 0 10px 10px rebeccapurple;
+
+    &__head{
+        font-size: 2em;
+        padding: 20px;
+        margin: 200px;
+        background-color: black;
+        color: white;
+       
+    }
+    &__head-tr{
+    }
+    &__head-tr-th{
+       
+
+    }
+
+    &__body{
+    }
+    &__body-tr-td{
+        border: 1px solid black;
+        text-align: center;
+    }
+    &__body-tr-button-edit{
+        background-color: blue;
+        padding: 5px;
+        border: none;
+    }
+    &__body-tr-button-edit:hover{
+        background-color: rgb(11, 11, 87);
+       transition: 300ms;
+    }
+    &__body-tr-button-edit i{
+        color: white;
+        font-size: 3em;
+    }
+    &__body-tr-button-delete{
+        background-color: red;
+        padding: 5px;
+        border: none;
+    }
+    &__body-tr-button-delete:hover{
+        background-color: rgb(128, 27, 27);
+       transition: 300ms;
+    }
+    &__body-tr-button-delete i{
+        color: white;
+        font-size: 3em;
+    }
+}
